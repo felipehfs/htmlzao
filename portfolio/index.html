@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title> Hello </title>
+	<style>
+		body {
+			background: linear-gradient(90deg, #ccc, #fff);
+			display: flex;
+			justify-content: center;
+			align-center: center;
+		}
+		#relogio {
+			display: block;
+			font-family: Arial;
+			text-shadow: 0 3px 8px #ccc;
+			width: 40%;
+			font-size: 10em;
+		}
+	</style>
+</head>
+<body>
+	<div id="componentClock">
+		<input type="checkbox" id="switch">Ativar/ Desativar
+		<datetime id="relogio"></datetime>
+	</div>
+	
+	<script>
+		window.onload = (function() {
+		
+			
+			function Clock(){
+					const clock = document.getElementById('relogio');
+				
+					function refresh (){
+						let time = new Date();
+						clock.textContent = time.toLocaleTimeString();
+					}
+				
+					this.init = function() {
+						setInterval(refresh, 1000);
+					}
+					
+					this.stop = function() {
+						clearInterval(refresh, 1000);
+					}
+			}
+			
+			return function() {
+				let clock = new Clock();
+				clock.init();
+			}
+		})()
+		
+	</script>
+</body>
+</html>

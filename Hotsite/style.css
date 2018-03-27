@@ -1,0 +1,62 @@
+header {
+    max-width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-nav{
+    list-style: none;
+}
+.menu-nav li {
+    display: inline-block;
+}
+.logo{
+    margin: 0;
+    padding: 0;
+}
+.logo h1{
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+    color: darkorange;
+    font-size: 3em;
+}
+.menu-nav li a{
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-family: Arial;
+}
+
+.menu-nav li a:hover {
+    color: white;
+    transition: 1s all ease-in-out;
+    background-color: #DC143C;
+}
+
+body {
+    background: linear-gradient( 120deg ,rgba(255, 0, 0, 0.7), rgba(0, 0, 255, 0.5)), url(img/background.jpg);
+    background-size: cover;
+}
+
+.banner {
+    width: 700px;
+    position: absolute;
+    color: white;
+    top: 20%;
+    background: rgba(0, 0, 0, 0.4);
+    left: 25%;
+    font-family: Arial;
+    padding: 18px;
+    height: 400px;
+    text-align: center;
+    font-size: 3vh;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.6);
+}
+.banner img {
+    width: 80%;
+    height: 80%;
+    background-size: cover;
+}
